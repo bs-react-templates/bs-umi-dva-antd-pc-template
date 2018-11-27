@@ -9,7 +9,7 @@
       "type": "string",
       "required": true,
       "label": "Project description",
-      "default": "A Vue.js project"
+      "default": "bs-umi-dva-antd-pc-template"
     },
     "author": {
       "type": "string",
