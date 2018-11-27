@@ -14,6 +14,7 @@ import PageHeaderLayout from '../PageHeaderLayout/index';
 import {Modal} from 'antd'
 import logo from 'assets/logo.png'
 import '../../themes/index.less';
+import styles from './index.less';
 const { Content, Header, Footer } = Layout;
 
 
@@ -199,7 +200,7 @@ export default class BasicLayout extends React.PureComponent {
             />
           </Header>
           <PageHeaderLayout breadcrumbNameMap={breadcrumbNameMap}></PageHeaderLayout>
-          <Content style={{ height: '100%', overflow: 'auto',margin:'20px',backgroundColor:'#FFF',padding:'15px'}}>
+          <Content className={styles.contain}>
             {children}
           </Content>
           <Footer style={{ padding: 0 }}>
