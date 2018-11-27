@@ -9,7 +9,7 @@ import loginTitleImg from 'assets/loginTitle.png';
 const links = [];
 const copyright = (<Fragment>
   <span style={{
-       color: '#fff',
+       color: '#fff'
     }}
   >
     福建博思软件<br/>
