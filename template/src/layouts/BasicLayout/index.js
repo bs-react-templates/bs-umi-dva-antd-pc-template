@@ -190,7 +190,7 @@ export default class BasicLayout extends React.PureComponent {
           onCollapse={this.handleMenuCollapse}
         />
         <Layout >
-          <Header style={{ padding: 0 }}>
+          <Header className={styles.header}>
             <GlobalHeader
               currentUser={currentUser}
               collapsed={collapsed}
@@ -200,10 +200,10 @@ export default class BasicLayout extends React.PureComponent {
             />
           </Header>
           <PageHeaderLayout breadcrumbNameMap={breadcrumbNameMap}></PageHeaderLayout>
-          <Content className={styles.contain}>
+          <Content className={styles.content}>
             {children}
           </Content>
-          <Footer style={{ padding: 0 }}>
+          <Footer className={styles.footer}>
             <GlobalFooter links={links} copyright={copyright}/>
           </Footer>
         </Layout>
