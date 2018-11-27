@@ -1,0 +1,53 @@
+// 本文件是对 ant-design:
+// https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+// 相应变量值的覆盖
+// 注意：只需写出要覆盖的变量即可（不需要覆盖的变量不要写）
+// http://www.iconfont.cn/collections/detail?cid=790
+
+@import "../../node_modules/antd/lib/style/themes/default.less";
+
+
+@border-radius-base: 3px;
+@border-radius-sm: 2px;
+@shadow-color: rgba(0,0,0,0.05);
+@shadow-1-down: 4px 4px 40px @shadow-color;
+@border-color-split: #f4f4f4;
+@border-color-base: #e5e5e5;
+@font-size-base: 13px;
+@text-color: #666;
+.reset-component() {
+  font-family: @font-family;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @text-color;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+:global{
+   .layout-content{
+
+     height: 100%;
+     overflow: auto;
+   }
+  .container-query{
+
+    height: 100%;
+  }
+  .red{
+    color: red;
+    div:last-child{
+      color: red;
+    }
+  }
+  .sc-searchbar-buttons-lastrow {
+    float: none!important;
+    text-align: right!important;
+  }
+}
+.ant-spin-container{
+  min-width: 100%!important;
+}
+
+
