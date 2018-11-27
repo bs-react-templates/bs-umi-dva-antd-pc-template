@@ -33,13 +33,13 @@ class UserLayout extends React.PureComponent {
         <div
           className={styles.container}
           style={{
-            backgroundImage: 'url(' + loginBgImg + ')',
+            backgroundImage: 'url(' + loginBgImg + ')'
           }}
         >
           <div
             style={{
               height: '100%',
-              overflow: 'auto',
+              overflow: 'auto'
             }}
           >
             <div className={styles.content}>
