@@ -3,7 +3,7 @@ module.exports = {
     title: {
       type: 'input',
       message: 'title',
-      default: 'ice react admin',
+      default: 'bs-umi-dva-antd-pc-template',
       validate: (value) => {
         value = value.trim();
         if (!value) {
