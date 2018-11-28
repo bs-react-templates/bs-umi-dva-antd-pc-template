@@ -17,7 +17,8 @@ class Error extends Component {
 		return (
       <Exception
       type={urldata.msg}
-      style={{ minHeight: 500, height: '80%' }}
+      style={{ minHeight: 500,
+        height: '80%' }}
       linkElement={Link}
     />
 		)
