@@ -31,9 +31,7 @@ class UserLayout extends React.PureComponent {
         <div
           className={styles.container}
         >
-          <div
-            style={{height: '100%',overflow: 'auto'}}
-          >
+          <div className={styles.main}>
             <div className={styles.content}>
               <div className={styles.top}>
                 <div className={styles.header}>
