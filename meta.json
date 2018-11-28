@@ -3,7 +3,8 @@
     "name": {
       "type": "string",
       "required": true,
-      "label": "Project name"
+      "label": "Project name",
+      "default": "bs-umi-dva-antd-pc-template"
     },
     "description": {
       "type": "string",
