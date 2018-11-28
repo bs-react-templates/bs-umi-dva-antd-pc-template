@@ -29,8 +29,8 @@ const links = [{
 const copyright = <div>Copyright <Icon type="copyright" /> 2017 蚂蚁金服体验技术部出品</div>;
 
 ReactDOM.render(
-  <div style={{ background: '#f5f5f5', overflow: 'hidden' }}>
-    <div style={{ height: 280 }} />
+  <div>
+    <div />
     <GlobalFooter links={links} copyright={copyright} />
   </div>
 , mountNode);
