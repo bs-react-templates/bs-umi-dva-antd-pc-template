@@ -30,7 +30,7 @@ export default class LoginPage extends Component {
             <UserName name="operatorAccount" placeholder="操作员账号" />
             <Password name="password" placeholder="密码" />
             <div className={styles.checkcode}>
-                <CheckCode placeholder="" name="macCode" style={{width:'226px'}} />
+                <CheckCode placeholder="" name="macCode" className={styles.codeinput} />
                 <img
                   src=""
                   alt=""
