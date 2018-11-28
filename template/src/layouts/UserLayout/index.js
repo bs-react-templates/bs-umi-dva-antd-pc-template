@@ -8,9 +8,7 @@ import loginTitleImg from 'assets/loginTitle.png';
 
 const links = [];
 const copyright = (<Fragment>
-  <span style={{
-       color: '#fff'
-    }}
+  <span style={{color: '#fff'}}
   >
     福建博思软件<br/>
     闽ICP备17021229号 客服电话：400-877-1666 服务时间：9:00-17:30
@@ -34,10 +32,7 @@ class UserLayout extends React.PureComponent {
           className={styles.container}
         >
           <div
-            style={{
-              height: '100%',
-              overflow: 'auto'
-            }}
+            style={{height: '100%',overflow: 'auto'}}
           >
             <div className={styles.content}>
               <div className={styles.top}>
