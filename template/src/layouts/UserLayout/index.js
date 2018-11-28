@@ -32,9 +32,6 @@ class UserLayout extends React.PureComponent {
       <DocumentTitle title={this.getPageTitle()}>
         <div
           className={styles.container}
-          style={{
-            backgroundImage: 'url(' + loginBgImg + ')'
-          }}
         >
           <div
             style={{
