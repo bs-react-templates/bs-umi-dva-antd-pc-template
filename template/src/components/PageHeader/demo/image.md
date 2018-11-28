@@ -27,7 +27,7 @@ const content = (
 
 const extra = (
   <div className="imgContainer">
-    <img style={{ 'width': '100%' }} alt="" src="https://gw.alipayobjects.com/zos/rmsportal/RzwpdLnhmvDJToTdfDPe.png" />
+    <img alt="" src="https://gw.alipayobjects.com/zos/rmsportal/RzwpdLnhmvDJToTdfDPe.png" />
   </div>
 );
 
