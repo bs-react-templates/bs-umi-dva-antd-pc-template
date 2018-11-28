@@ -3,6 +3,7 @@
 	"version": "{{version}}",
 	"description": "{{ description }}",
 	"author": "{{ author }}",
+  	"license": "{{ license }}",
 	"scripts": {
 		"start": "umi dev",
 		"dev:test": "cross-env PORT=9090 WATCH_FILES=none BROWSER=none CLEAR_CONSOLE=none COMPILE_ON_DEMAND=none COVERAGE=true BABELRC=true umi dev",
@@ -50,11 +51,6 @@
 		"node-plop": "^0.13.0",
 		"plop": "^2.0.0",
 		"sync-request": "*"
-	},
-	"scaffoldConfig": {
-	  "name": "{{npmName}}",
-	  "title": "{{title}}",
-	  "screenshot": ""
 	}
 }
 
