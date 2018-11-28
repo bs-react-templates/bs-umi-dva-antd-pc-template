@@ -8,7 +8,7 @@ import loginTitleImg from 'assets/loginTitle.png';
 
 const links = [];
 const copyright = (<Fragment>
-  <span style={{color: '#fff'}}
+  <span className={styles.footspan}
   >
     福建博思软件<br/>
     闽ICP备17021229号 客服电话：400-877-1666 服务时间：9:00-17:30
