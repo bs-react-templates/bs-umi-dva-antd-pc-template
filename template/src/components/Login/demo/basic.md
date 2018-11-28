@@ -66,7 +66,7 @@ class LoginDemo extends React.Component {
         </Tab>
         <div>
           <Checkbox checked={this.state.autoLogin} onChange={this.changeAutoLogin}>Keep me logged in</Checkbox>
-          <a style={{ "float": "right" }} href="">Forgot password</a>
+          <a href="">Forgot password</a>
         </div>
         <Submit>Login</Submit>
         <div>
@@ -74,7 +74,7 @@ class LoginDemo extends React.Component {
           <span className="icon icon-alipay" />
           <span className="icon icon-taobao" />
           <span className="icon icon-weibo" />
-          <a style={{ "float": "right" }} href="">Register</a>
+          <a href="">Register</a>
         </div>
       </Login>
     );
