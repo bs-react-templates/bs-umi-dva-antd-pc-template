@@ -55,7 +55,8 @@ class LoginDemo extends React.Component {
         <Tab key="tab1" tab="Account">
           {
             this.state.notice &&
-            <Alert style={{ marginBottom: 24 }} message={this.state.notice} type="error" showIcon closable />
+            <Alert style={{ marginBottom: 24,
+            }} message={this.state.notice} type="error" showIcon closable />
           }
           <UserName name="username" />
           <Password name="password" />
