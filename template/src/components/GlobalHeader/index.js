@@ -56,7 +56,7 @@ export default class GlobalHeader extends PureComponent {
                 <span className={styles.name}>{currentUser.name}</span>
               </span>
             </Dropdown>
-          ) : <Spin size="small" style={{ marginLeft: 8 }} />}
+          ) : <Spin size="small" style={{ "marginLeft": 8 }} />}
         </div>
       </div>
     );
