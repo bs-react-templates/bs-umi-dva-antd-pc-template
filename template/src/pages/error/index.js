@@ -3,6 +3,7 @@ import {connect} from 'dva';
 import Link from 'umi/link';
 import Exception from 'components/Exception';
 import qs from 'qs';
+import styles from './index.less';
 class Error extends Component {
 	constructor(props, context) {
 		super(props, context);
@@ -17,8 +18,7 @@ class Error extends Component {
 		return (
       <Exception
       type={urldata.msg}
-      style={{ minHeight: 500,
-        height: '80%' }}
+      className={styles.exception}
       linkElement={Link}
     />
 		)
