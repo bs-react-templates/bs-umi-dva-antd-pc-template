@@ -1,8 +1,8 @@
 {
-	"name": "{{npmName}}",
+	"name": "{{ name }}",
 	"version": "{{version}}",
-	"description": "{{description}}",
-	"author": "{{author}}",
+	"description": "{{ description }}",
+	"author": "{{ author }}",
 	"scripts": {
 		"start": "umi dev",
 		"dev:test": "cross-env PORT=9090 WATCH_FILES=none BROWSER=none CLEAR_CONSOLE=none COMPILE_ON_DEMAND=none COVERAGE=true BABELRC=true umi dev",
