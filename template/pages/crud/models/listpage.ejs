@@ -1,0 +1,35 @@
+import modelExtend from 'dva-model-extend';
+import {list} from 'baseModel'
+import {pagesFn} from '../service'
+const namespace= '<%=data['namespace'] %>'
+const appModel = modelExtend(list, {
+    namespace,
+    state: {
+
+    },
+    effects: {
+        * initPage({payload},{call,put,select}) {
+
+        },
+        * queryPage({payload},{call,put}) {
+            const {data} = yield call(pagesFn, payload);
+            yield put({
+            type: 'syncPageList',
+            payload: {data},
+            })
+        },
+        <% if(data.isQuery) {%>
+        * search({payload}, {call, put, select}) {
+            let params={};
+            yield put({
+                type: 'syncState',
+                payload: {params},
+            })
+        },
+        <% }%>
+    },
+    reducers: {
+
+    },
+})
+export default appModel;

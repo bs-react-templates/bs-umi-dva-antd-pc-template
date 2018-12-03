@@ -1,0 +1,33 @@
+/**
+    * @parame label     字段描述
+    * @parame name      字段名
+    * @parame isForm    表单字段
+    * @parame isQuery   查询字段
+    * @parame isTable   表格字段
+    * @parame isView    详情字段
+    * @parame component 组件
+*/
+import { Input } from 'antd';
+export const pageConfig=[
+<% data.forEach(function(item,key){%>
+    {<% if(item.label) {%>
+        label: '<%=item.label %>',<%}else{%>
+        label: '',<% }%><% if(item.name) {%>
+        name: '<%=item.name %>',<%}else{%>
+        name: '',<% }%><% if(item.isForm) {%>
+        isForm:{
+            order:<%=item.isForm.order %>,
+        },<% }%><% if(item.isQuery) {%>
+        isQuery:{
+            order:<%=item.isQuery.order %>,
+        },<% }%><% if(item.isTable) {%>
+        isTable:{
+            order:<%=item.isTable.order %>,
+        },<% }%><% if(item.isView) {%>
+        isView:{
+            order:<%=item.isView.order %>,
+        },<% }%>
+        component:Input,
+    },<% }) %>
+]
+

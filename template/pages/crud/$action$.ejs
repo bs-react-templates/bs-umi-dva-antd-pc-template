@@ -1,0 +1,21 @@
+import React, { Component } from 'react';
+import { ScTable,ScSearchBar } from 'sc-dva-antd-pro'
+import  {EditPageTpl} from 'pagetpl'
+import {pageConfig} from './components/pageConfig'
+import {model,edit} from 'annotation'
+import {generatorFormInfo,generatorViewInfo} from 'utils/pageUtils'
+@model({loading:['insertData','updateData']})
+@edit()
+export default class <%=data['className'] %> extends Component {
+    render(){
+        let action=this.getAction();
+        const formInfo=generatorFormInfo(pageConfig,action);
+        const viewInfo=generatorViewInfo(pageConfig);
+        let {modelData:{editData}}=this.props;
+        return(
+            <EditPageTpl editData={editData} actions={{'add':{type:'insertData'},edit:{type:'editData'}}} viewCol={3} viewInfo={viewInfo} formInfo={formInfo}>
+
+            </EditPageTpl>
+        )
+    }
+}

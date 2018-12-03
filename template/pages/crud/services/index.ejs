@@ -1,0 +1,15 @@
+import { request } from 'utils'
+import {apiConfig} from 'config'
+<% for(var key in data){%>
+const { <%=key %> }=apiConfig;
+
+<% for(var index in data[key]){%>
+export async function <%=index %>Fn(data) {
+    return request({
+        url:<%=key %>.<%=index %>,
+        method:'<%=data[key][index]['method'] %>',
+        data,
+    })
+};
+<% }%>
+<% }%>
