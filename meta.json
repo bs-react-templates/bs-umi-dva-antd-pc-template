@@ -1,5 +1,7 @@
 {
   "prompts": {
+    "type":{"type":"list","message":"Please select project type","choices":["scaffolds","modules"]},
+    "modules": {},
     "name": {
       "type": "string",
       "required": true,
@@ -21,6 +23,13 @@
       "label": "License",
       "default": "MIT"
     }
+  },
+  "filters": {
+    "scaffolds/**/*": "type==='scaffolds'",
+    "modules/**/*": "type==='modules'",
+    "modules/aa/**/*": "type==='modules' && modules.aa",
+    "modules/bb/**/*": "type==='modules' && modules.bb",
+    "modules/cc/**/*": "type==='modules' && modules.cc"
   },
   "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}"
 }
