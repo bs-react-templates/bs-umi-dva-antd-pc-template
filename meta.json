@@ -26,10 +26,10 @@
   },
   "filters": {
     "scaffolds/**/*": "type==='scaffolds'",
-    "modules/**/*": "type==='modules'",
-    "modules/aa/**/*": "type==='modules' && modules.aa",
-    "modules/bb/**/*": "type==='modules' && modules.bb",
-    "modules/cc/**/*": "type==='modules' && modules.cc"
+    "pages/**/*": "type==='modules'",
+    "pages/aa/**/*": "type==='modules' && modules.aa",
+    "pages/bb/**/*": "type==='modules' && modules.bb",
+    "pages/cc/**/*": "type==='modules' && modules.cc"
   },
   "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}"
 }
