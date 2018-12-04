@@ -25,7 +25,6 @@ class Error extends Component {
 	}
 	
 }
-
 export default connect(({error}) => ({
 	error,
 }))(Error);

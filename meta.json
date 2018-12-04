@@ -27,7 +27,8 @@
   "filters": {
     "scaffolds/**/*": "type==='scaffolds'",
     "pages/**/*": "type==='modules'",
-    "pages/crud/**/*": "type==='modules' && modules.crud"
+    "pages/crud/**/*": "type==='modules' && modules.crud",
+    "pages/error/**/*": "type==='modules' && modules.error"
   },
   "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}"
 }
