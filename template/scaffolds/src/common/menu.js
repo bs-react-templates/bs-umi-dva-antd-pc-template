@@ -1,6 +1,32 @@
 import { isUrl } from 'utils/utils';
 
-let menuData = [];
+let menuData= [
+  {
+    name: '概况',
+    icon: 'dashboard',
+    path: 'home',
+  },
+  {
+    name: 'page01',
+    icon: 'dashboard',
+    path:'page01',
+    children:[{
+      name: 'page01child',
+      icon: 'dashboard',
+      path: 'page01child',
+    }],
+  },
+  {
+    name: 'page02',
+    icon: 'dashboard',
+    path: 'page02',
+  },
+  {
+    name: 'page03',
+    icon: 'dashboard',
+    path: 'page03',
+  },
+];
 let formatMenuData=[];
 let menuMap=null;
 

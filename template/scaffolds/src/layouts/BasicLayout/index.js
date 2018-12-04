@@ -150,34 +150,7 @@ export default class BasicLayout extends React.PureComponent {
       routerData,
     } = this.props;
     let breadcrumbNameMap = getBreadcrumbNameMap(getMenuData(),routerData);
-    let menuData= [
-      {
-        name: '概况',
-        icon: 'dashboard',
-        path: 'home',
-      },
-      {
-        name: 'page01',
-        icon: 'dashboard',
-        path:'page01',
-        children:[{
-          name: 'page01child',
-          icon: 'dashboard',
-          path: 'page01child',
-        }],
-      },
-      {
-        name: 'page02',
-        icon: 'dashboard',
-        path: 'page02',
-      },
-      {
-        name: 'page03',
-        icon: 'dashboard',
-        path: 'page03',
-      },
-    ];
-    setMenuData(menuData);
+    // setMenuData(menuData);
     const layout = (
       <Layout className={'layout-content'}>
         <SiderMenu
