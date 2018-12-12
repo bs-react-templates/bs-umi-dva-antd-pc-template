@@ -1,7 +1,7 @@
 <% for(var key in module){%>
 import modelExtend from 'dva-model-extend';
 import {edit} from 'baseModel'
-import {queryPage,insert,queryOne ,update} from '../service'
+import {queryPage,insert,queryOne ,update} from '../services/service'
 
 const namespace= '<%=module[key]['namespace'] %>.editpage'
 const appModel = modelExtend(edit,{
