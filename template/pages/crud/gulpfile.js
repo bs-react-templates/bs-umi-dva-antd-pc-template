@@ -6,7 +6,7 @@ var clean = require('gulp-clean');
 const path = require('path');
 const src = path.join(__dirname);
 gulp.task('gulptask', (cb) => {
-  return exec(`genercode --config ${__dirname}/config.json`, (err, stdout, stderr) => {
+  return exec(`bs genercode --config ${__dirname}/config.json`, (err, stdout, stderr) => {
     if (err) {return err}
     if(!stdout){
       return;
