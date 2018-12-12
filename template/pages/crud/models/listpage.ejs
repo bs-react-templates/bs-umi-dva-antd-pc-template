@@ -1,7 +1,8 @@
+<% for(var key in module){%>
 import modelExtend from 'dva-model-extend';
 import {list} from 'baseModel'
-import {pagesFn} from '../services/service.js'
-const namespace= '<%=data['namespace'] %>'
+import {pagesFn} from '../service'
+const namespace= '<%=module[key]['namespace'] %>'
 const appModel = modelExtend(list, {
     namespace,
     state: {
@@ -18,7 +19,7 @@ const appModel = modelExtend(list, {
             payload: {data},
             })
         },
-        <% if(data.isQuery) {%>
+        <% if(module[key].isQuery) {%>
         * search({payload}, {call, put, select}) {
             let params={};
             yield put({
@@ -33,3 +34,4 @@ const appModel = modelExtend(list, {
     },
 })
 export default appModel;
+<% }%>

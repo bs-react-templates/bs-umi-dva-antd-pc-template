@@ -1,0 +1,12 @@
+import { request } from 'utils'
+<% for(var key in module){%>
+    <% for(var index in module[key]['api']){%>
+    export async function <%=index %>Fn(data) {
+        return request({
+            url:'<%=module[key]['api'][index]['url'] %>',
+            method:'<%=module[key]['api'][index]['method'] %>',
+            data,
+        })
+    };
+    <% }%>
+<% }%>

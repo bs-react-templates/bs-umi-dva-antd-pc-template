@@ -15,9 +15,10 @@ const Operation=ScTable.Operation;
 
 @model()
 @list()
-export default class <%=data['className'] %> extends Component {
+<% for(var key in module){%>
+export default class <%=module[key]['className'] %> extends Component {
     render(){
-        <% if(data.isQuery) {%>
+        <% if(module[key].isQuery) {%>
         const queryInfo=generatorSearchInfo(pageConfig);
         <% }%>
         const columns=generatorTaleInfo(pageConfig);
@@ -43,11 +44,12 @@ export default class <%=data['className'] %> extends Component {
         </Toolbar>)
         return(
         <ListPageTpl toolbar={toolbar}>
-            <% if(data.isQuery) {%>
-            <ScSearchBar type={'<%=data['namespace'] %>/search'} {...queryInfo} />
+            <% if(module[key].isQuery) {%>
+            <ScSearchBar type={'<%=module[key]['namespace'] %>/search'} {...queryInfo} />
             <% }%>
-            <ScTable modelKey={'data'} type={'<%=data['namespace'] %>/queryPage'} params={params}  autoload={true} columns={tableColumns}></ScTable>
+            <ScTable modelKey={'data'} type={'<%=module[key]['namespace'] %>/queryPage'} params={params}  autoload={true} columns={tableColumns}></ScTable>
         </ListPageTpl>
         )
     }
 }
+<% }%>

@@ -9,25 +9,28 @@
 */
 import { Input } from 'antd';
 export const pageConfig=[
-<% data.forEach(function(item,key){%>
-    {<% if(item.label) {%>
-        label: '<%=item.label %>',<%}else{%>
-        label: '',<% }%><% if(item.name) {%>
-        name: '<%=item.name %>',<%}else{%>
-        name: '',<% }%><% if(item.isForm) {%>
-        isForm:{
-            order:<%=item.isForm.order %>,
-        },<% }%><% if(item.isQuery) {%>
-        isQuery:{
-            order:<%=item.isQuery.order %>,
-        },<% }%><% if(item.isTable) {%>
-        isTable:{
-            order:<%=item.isTable.order %>,
-        },<% }%><% if(item.isView) {%>
-        isView:{
-            order:<%=item.isView.order %>,
-        },<% }%>
-        component:Input,
-    },<% }) %>
+<% for(var key in module){%>
+    <% module[key]['data'].forEach(function(item,key){%>
+        {<% if(item.label) {%>
+            label: '<%=item.label %>',<%}else{%>
+            label: '',<% }%><% if(item.name) {%>
+            name: '<%=item.name %>',<%}else{%>
+            name: '',<% }%><% if(item.isForm) {%>
+            isForm:{
+                order:<%=item.isForm.order %>,
+            },<% }%><% if(item.isQuery) {%>
+            isQuery:{
+                order:<%=item.isQuery.order %>,
+            },<% }%><% if(item.isTable) {%>
+            isTable:{
+                order:<%=item.isTable.order %>,
+            },<% }%><% if(item.isView) {%>
+            isView:{
+                order:<%=item.isView.order %>,
+            },<% }%>
+            component:Input,
+        },<% }) %>
+<% }%>
 ]
+
 

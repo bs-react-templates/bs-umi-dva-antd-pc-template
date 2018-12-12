@@ -6,7 +6,8 @@ import {model,edit} from 'annotation'
 import {generatorFormInfo,generatorViewInfo} from 'utils/pageUtils'
 @model({loading:['insertData','updateData']})
 @edit()
-export default class <%=data['className'] %> extends Component {
+<% for(var key in module){%>
+export default class <%=module[key]['className'] %> extends Component {
     render(){
         let action=this.getAction();
         const formInfo=generatorFormInfo(pageConfig,action);
@@ -19,3 +20,4 @@ export default class <%=data['className'] %> extends Component {
         )
     }
 }
+<% }%>
