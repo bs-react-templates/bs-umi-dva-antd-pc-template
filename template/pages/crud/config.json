@@ -1,0 +1,12 @@
+{
+    "url" : "http://172.18.169.72:8010/v2/api-docs",
+    "module":"/analysis/check/",
+    "api":"",
+    "dir":"",
+    "rule":{
+        "isQuery":"pages",
+        "isTable":"pages",
+        "isView":"detail",
+        "isForm":"Form"
+    }
+}
