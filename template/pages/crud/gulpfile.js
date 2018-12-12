@@ -13,7 +13,7 @@ gulp.task('gulptask', (cb) => {
     }
     var stdoutObj = JSON.parse(stdout);
     gulp
-    .src([src + '/**/*.ejs'])
+    .src([src + '/**/*.ejs','!node_modules/**/*'])
     .pipe(gulp_ejs(stdoutObj))
     .pipe(clean({force: true}))
     .pipe(
